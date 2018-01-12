@@ -66,6 +66,14 @@
                                 </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group text-right">
+                                    <a href="{{ route('frontend.auth.register') }}">{{ __('labels.frontend.auth.register_box_title') }}?</a>
+                                </div><!--form-group-->
+                            </div><!--col-->
+                        </div><!--row-->
                     {{ html()->form()->close() }}
 
                     <div class="row">

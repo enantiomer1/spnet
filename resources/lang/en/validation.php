@@ -175,6 +175,7 @@ return [
             'zipcode'                   => 'Zipcode (5 digits)',
             'sobriety_date'             => 'Sobriety Date (Enter as YYYY-MM-DD)',
             'bio'                       => 'Bio (Background snippet)',
+            'search_radius'             => 'Search Radius (Miles)',
 
         ],
     ],

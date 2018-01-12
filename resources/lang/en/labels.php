@@ -122,6 +122,11 @@ return [
             'button' => 'Send Information',
         ],
 
+        'search' => [
+            'box_title' => 'Sponsor Search',
+            'button' => 'Search Now',
+        ],
+
         'passwords' => [
             'expired_password_box_title' => 'Your password has expired.',
             'forgot_password'                 => 'Forgot Your Password?',

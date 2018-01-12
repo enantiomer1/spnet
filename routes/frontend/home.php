@@ -14,6 +14,9 @@ Route::post('contact/send', 'ContactController@send')->name('contact.send');
  * These routes can not be hit if the password is expired
  */
 Route::group(['middleware' => ['auth', 'password_expires']], function () {
+
+    Route::get('/sponsor-search', 'HomeController@sponsor_search')->name('sponsor-search');
+
     Route::group(['namespace' => 'User', 'as' => 'user.'], function () {
         /*
          * User Dashboard Specific
