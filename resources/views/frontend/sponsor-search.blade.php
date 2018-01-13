@@ -11,7 +11,7 @@
                 </div><!--card-header-->
 
                 <div class="card-body">
-                    {{ html()->form('POST', route('frontend.auth.login.post'))->open() }}
+                    {{ html()->form('POST', route('frontend.sponsor-search.search'))->open() }}
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -31,7 +31,7 @@
                                 <div class="form-group">
                                     {{ html()->label(__('validation.attributes.frontend.search_radius'))->for('search_radius') }}
 
-                                    {{ html()->input('search_radius')
+                                    {{ html()->text('search_radius')
                                         ->class('form-control')
                                         ->placeholder(__('validation.attributes.frontend.search_radius'))
                                         ->required() }}

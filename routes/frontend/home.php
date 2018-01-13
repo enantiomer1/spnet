@@ -16,6 +16,7 @@ Route::post('contact/send', 'ContactController@send')->name('contact.send');
 Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
     Route::get('/sponsor-search', 'HomeController@sponsor_search')->name('sponsor-search');
+    Route::post('/sponsor-search/search', 'HomeController@search')->name('sponsor-search.search');
 
     Route::group(['namespace' => 'User', 'as' => 'user.'], function () {
         /*
