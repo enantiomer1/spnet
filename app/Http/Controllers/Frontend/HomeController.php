@@ -7,6 +7,8 @@ use App\Http\Requests\SearchRequest;
 use GuzzleHttp\Client;
 use GuzzleHttp\Message\Request;
 use GuzzleHttp\Message\Response;
+use App\Models\Zipdata;
+use App\Models\Auth\User;
 
 /**
  * Class HomeController.
@@ -31,14 +33,34 @@ class HomeController extends Controller
 
     public function search(SearchRequest $request)
     {
-        $client = new Client();
         $zipcode = $request->zipcode;
-        $distance = $request->search_radius;
-        $api_response = $client->get('https://www.zipcodeapi.com/rest/TFCFzMXK0DFMBoCQ10Yp0EjnBG3u6evhnv7ISt02sStAfNyovLVNTikggqe2OOlS/radius.json/70818/5/miles');
-        $response = ($api_response);
+        $d = $request->search_radius;
+        $get_matching_zip = Zipdata::where('zip_code', '=', $zipcode)->first();
 
-        return $response;
+        $lat1 = $get_matching_zip->latitude;
+        $lon1 = $get_matching_zip->longitude;
+        $r = 3959; // radius of the earth in miles
 
-        // return view('frontend.sponsor-results', compact('response'));
+        $latN = rad2deg(asin(sin(deg2rad($lat1)) * cos($d / $r) + cos(deg2rad($lat1)) * sin($d / $r) * cos(deg2rad(0))));
+        $latS = rad2deg(asin(sin(deg2rad($lat1)) * cos($d / $r) + cos(deg2rad($lat1)) * sin($d / $r) * cos(deg2rad(180))));
+        $lonE = rad2deg(deg2rad($lon1) + atan2(sin(deg2rad(90)) * sin($d / $r) * cos(deg2rad($lat1)), cos($d / $r) - sin(deg2rad($lat1)) * sin(deg2rad($latN))));
+        $lonW = rad2deg(deg2rad($lon1) + atan2(sin(deg2rad(270)) * sin($d / $r) * cos(deg2rad($lat1)), cos($d / $r) - sin(deg2rad($lat1)) * sin(deg2rad($latN))));
+
+        $get_coordinates = Zipdata::where('latitude', '<=', $latN)
+            ->where('latitude', '>=', $latS)
+            ->where('longitude', '<=', $lonE)
+            ->where('longitude', '>=', $lonW)
+            ->where('city', '!=', '')
+            ->get();
+        
+        return $get_coordinates;
+
+        // $get_matching_users = (function ($get_users) {
+        //     foreach ($get_coordinates as $value) {
+        //         echo $value->zip_code;
+        //     }
+        // });
+
+        // return view('frontend.sponsor-search-results', compact('zip_codes'));
     }
 }
