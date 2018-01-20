@@ -30,7 +30,8 @@ class CreateUsersTable extends Migration
             $table->boolean('confirmed')->default(config('access.users.confirm_email') ? false : true);
             $table->string('zipcode', 25)->default('UpdateForSponsorSearch');
             $table->date('sobriety_date')->nullable();
-            $table->text('bio', 255)->default('CreateForSponsorSearch');
+            $table->string('bio', 255)->default('CreateForSponsorSearch');
+            $table->string('zipdata_id', 15)->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -43,7 +43,7 @@
                             <div class="col">
                                 <div class="form-group clearfix">
                                     {{ form_submit(__('labels.frontend.search.button'))
-                                        ->class ('btn btn-outline-primary') }}
+                                        ->class ('btn btn-primary') }}
                                 </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->

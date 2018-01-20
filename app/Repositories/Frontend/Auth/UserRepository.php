@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Events\Frontend\Auth\UserConfirmed;
 use App\Events\Frontend\Auth\UserProviderRegistered;
 use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
-
+use App\Models\Zipdata;
 /**
  * Class UserRepository.
  */
@@ -80,6 +80,7 @@ class UserRepository extends BaseRepository
         throw new GeneralException(__('exceptions.backend.access.users.not_found'));
     }
 
+
     /**
      * @param array $data
      *
@@ -139,6 +140,11 @@ class UserRepository extends BaseRepository
         $user->sobriety_date = $input['sobriety_date'];
         $user->bio = $input['bio'];
         $user->zipcode = $input['zipcode'];
+        $zipdata = zipdata::where('zip_code', '=', $input['zipcode'])->first();
+        $user->zipdata_id = $zipdata->id;
+        if (! $user->zipdatas()->where('user_id', $user->id)->exists()) {
+            $user->zipdatas()->attach($zipdata);
+            }
         $user->avatar_type = $input['avatar_type'];
 
         // Upload profile image if necessary

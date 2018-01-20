@@ -68,7 +68,6 @@ class UserController extends Controller
             'username',
             'email',
             'password',
-            'timezone',
             'active',
             'confirmed',
             'confirmation_email',
@@ -120,7 +119,6 @@ class UserController extends Controller
         $this->userRepository->update($user, $request->only(
             'username',
             'email',
-            'timezone',
             'roles',
             'permissions',
             'zipcode'

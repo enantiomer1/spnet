@@ -46,6 +46,7 @@ class User extends Authenticatable
         'sobriety_date',
         'bio',
         'zipcode',
+        'zipdata_id',
     ];
     
     /**
@@ -65,4 +66,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = ['full_name'];
+
+
+    public function zipdatas()
+    {
+        return $this->belongsToMany('App\Models\Zipdata');
+    }
+
 }

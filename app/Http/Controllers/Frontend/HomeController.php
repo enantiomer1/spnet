@@ -52,15 +52,19 @@ class HomeController extends Controller
             ->where('longitude', '>=', $lonW)
             ->where('city', '!=', '')
             ->get();
-        
+
+        // $zipdata_id = zipdata::where('zip_code', '=', $zipcode)->pluck('id');
+
         return $get_coordinates;
 
-        // $get_matching_users = (function ($get_users) {
-        //     foreach ($get_coordinates as $value) {
-        //         echo $value->zip_code;
-        //     }
-        // });
+         // return $get_coordinates;
 
-        // return view('frontend.sponsor-search-results', compact('zip_codes'));
+        // $get_matching_users = function ($get_coorditantes) {
+        //     foreach ($get_coordinates as $coordinate) {
+        //         User::where('zipcode', '=', $coordinate->zip_code)->first();
+        //     }
+        // };
+
+        // return view('frontend.sponsor-search-results', compact('get_coordinates'));
     }
 }

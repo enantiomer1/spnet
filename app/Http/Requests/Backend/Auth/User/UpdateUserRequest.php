@@ -29,7 +29,6 @@ class UpdateUserRequest extends FormRequest
         return [
             'email' => 'required|email|max:191',
             'username'  => 'required|max:191',
-            'timezone' => 'required|max:191',
             'zipcode' => 'required|max:191',
             'roles' => 'required|array',
         ];

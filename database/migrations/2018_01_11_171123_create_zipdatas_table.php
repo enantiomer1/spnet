@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateZipdataTable extends Migration
+class CreateZipdatasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateZipdataTable extends Migration
      */
     public function up()
     {
-        Schema::create('zipdata', function (Blueprint $table) {
+        Schema::create('zipdatas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('zip_code', 5);
             $table->string('state_abbreviation', 2);
@@ -31,6 +31,6 @@ class CreateZipdataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zipdata');
+        Schema::dropIfExists('zipdatas');
     }
 }

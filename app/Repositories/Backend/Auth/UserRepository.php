@@ -101,7 +101,6 @@ class UserRepository extends BaseRepository
             $user = parent::create([
                 'username' => $data['username'],
                 'email' => $data['email'],
-                'timezone' => $data['timezone'],
                 'password' => bcrypt($data['password']),
                 'active' => isset($data['active']) && $data['active'] == '1' ? 1 : 0,
                 'confirmation_code' => md5(uniqid(mt_rand(), true)),
