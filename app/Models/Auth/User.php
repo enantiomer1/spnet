@@ -44,6 +44,7 @@ class User extends Authenticatable
         'confirmation_code',
         'confirmed',
         'sobriety_date',
+        'program',
         'bio',
         'zipcode',
         'zipdata_id',

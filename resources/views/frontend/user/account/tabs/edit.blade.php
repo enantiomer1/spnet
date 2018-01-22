@@ -40,11 +40,41 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.program'))->for('program') }}
+
+                {{ html()->text('program')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.program'))
+                    ->attribute('maxlength', 191)
+                    ->required()
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
                 {{ html()->label(__('validation.attributes.frontend.sobriety_date'))->for('sobriety_date') }}
 
                 {{ html()->text('sobriety_date')
                     ->class('form-control')
                     ->placeholder(__('validation.attributes.frontend.sobriety_date'))
+                    ->attribute('maxlength', 191)
+                    ->required()
+                    ->autofocus() }}
+            </div><!--form-group-->
+        </div><!--col-->
+    </div><!--row-->
+
+     <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ html()->label(__('validation.attributes.frontend.zipcode'))->for('zipcode') }}
+
+                {{ html()->text('zipcode')
+                    ->class('form-control')
+                    ->placeholder(__('validation.attributes.frontend.zipcode'))
                     ->attribute('maxlength', 191)
                     ->required()
                     ->autofocus() }}
@@ -60,21 +90,6 @@
                 {{ html()->textarea('bio')
                     ->class('form-control')
                     ->placeholder(__('validation.attributes.frontend.bio'))
-                    ->attribute('maxlength', 191)
-                    ->required()
-                    ->autofocus() }}
-            </div><!--form-group-->
-        </div><!--col-->
-    </div><!--row-->
-
-    <div class="row">
-        <div class="col">
-            <div class="form-group">
-                {{ html()->label(__('validation.attributes.frontend.zipcode'))->for('zipcode') }}
-
-                {{ html()->text('zipcode')
-                    ->class('form-control')
-                    ->placeholder(__('validation.attributes.frontend.zipcode'))
                     ->attribute('maxlength', 191)
                     ->required()
                     ->autofocus() }}

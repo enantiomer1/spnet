@@ -137,11 +137,10 @@ class UserRepository extends BaseRepository
     {
         $user = $this->getById($id);
         $user->username = $input['username'];
+        $user->program = $input['program'];
         $user->sobriety_date = $input['sobriety_date'];
-        $user->bio = $input['bio'];
         $user->zipcode = $input['zipcode'];
-        $zipdata = zipdata::where('zip_code', '=', $input['zipcode'])->first();
-        $user->zipdata_id = $zipdata->id;
+        $user->bio = $input['bio'];
         if (! $user->zipdatas()->where('user_id', $user->id)->exists()) {
             $user->zipdatas()->attach($zipdata);
             }

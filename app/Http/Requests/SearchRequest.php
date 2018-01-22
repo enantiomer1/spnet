@@ -23,8 +23,8 @@ class SearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'zipcode' => 'required',
-            'search_radius' => 'required',
+            'zipcode' => 'required|size:5',
+            'search_radius' => 'required|max:200',
         ];
     }
 }

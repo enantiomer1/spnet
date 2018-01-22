@@ -17,7 +17,7 @@
             @endif
 
             @auth
-                <li class="nav-item"><a href="{{route('frontend.user.dashboard')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.user.dashboard')) }}">{{ __('navs.frontend.dashboard') }}</a></li>
+                <li class="nav-item"><a href="{{route('frontend.sponsor-search')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.sponsor-search')) }}">{{ __('navs.frontend.sponsor_search') }}</a></li>
             @endauth
 
             @guest

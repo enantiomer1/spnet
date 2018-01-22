@@ -29,11 +29,12 @@ class UpdateProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'username'  => 'required|max:191',
-            'email' => 'sometimes|required|email|max:191',
-            'sobriety_date' => 'required|max:191',
-            'bio' => 'required|max:191',
+            'username'  => 'required|max:60',
+            'email' => 'sometimes|required|email|max:60',
+            'program' => 'required|max:7',
+            'sobriety_date' => 'required|max:12',
             'zipcode' => 'required|max:191',
+            'bio' => 'required|max:255',
             'avatar_type' => ['required', 'max:191', Rule::in(array_merge(['gravatar', 'storage'], (new Socialite)->getAcceptedProviders()))],
             'avatar_location' => 'sometimes|image|max:2048',
         ];

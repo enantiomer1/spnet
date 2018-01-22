@@ -9,8 +9,10 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                         @foreach ($get_coordinates as $coordinate)
-                        <li>{{ $coordinate->zipdata }}</li>
+                         @foreach ($zipdatas as $zipdata)
+                            @foreach ($zipdata->users as $user)
+                                <li>{{ $user->username }}</li>
+                            @endforeach
                         @endforeach
                     </ul>    
                 

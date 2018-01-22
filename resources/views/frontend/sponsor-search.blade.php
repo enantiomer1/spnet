@@ -20,7 +20,7 @@
                                     {{ html()->text('zipcode')
                                         ->class('form-control')
                                         ->placeholder(__('validation.attributes.frontend.zipcode'))
-                                        ->attribute('maxlength', 191)
+                                        ->attribute('maxlength', 5)
                                         ->required() }}
                                 </div><!--form-group-->
                             </div><!--col-->

@@ -28,10 +28,10 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('active')->default(1)->unsigned();
             $table->string('confirmation_code')->nullable();
             $table->boolean('confirmed')->default(config('access.users.confirm_email') ? false : true);
-            $table->string('zipcode', 25)->default('UpdateForSponsorSearch');
+            $table->string('program', 7)->default('');
             $table->date('sobriety_date')->nullable();
-            $table->string('bio', 255)->default('CreateForSponsorSearch');
-            $table->string('zipdata_id', 15)->nullable();
+            $table->string('zipcode', 5)->default('');
+            $table->string('bio', 255)->default('');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

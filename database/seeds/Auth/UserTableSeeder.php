@@ -26,33 +26,39 @@ class UserTableSeeder extends Seeder
             'password'          => bcrypt('1234'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),
             'confirmed'         => true,
-            'zipcode'           => '70818',
+            'program'           => 'AA',
             'sobriety_date'     => '2000-4-25',
-            'zipdata_id'        => '11588',
+            'zipcode'           => '70818',
+            'bio'               => 'Big Book oriented, love the steps, email me.',
+            
         ]);
 
         User::create([
-            'username'        => 'Backend',
+            'username'          => 'Backend',
             'email'             => 'executive@executive.com',
             'password'          => bcrypt('1234'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),
             'confirmed'         => true,
-            'zipcode'           => '70816',
+            'program'           => 'NA',
             'sobriety_date'     => '2005-6-11',
+            'zipcode'           => '70816',
+            
         ]);
 
         User::create([
-            'username'        => 'Default',
+            'username'          => 'Default',
             'email'             => 'user@user.com',
             'password'          => bcrypt('1234'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),
             'confirmed'         => true,
-            'zipcode'           => '70814',
+            'program'           => 'Al-Anon',
             'sobriety_date'     => '1995-12-8',
+            'zipcode'           => '70814',
+            
         ]);
 
         User::create([
-            'username'        => 'John',
+            'username'          => 'John',
             'email'             => 'john@mail.com',
             'password'          => bcrypt('1234'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),

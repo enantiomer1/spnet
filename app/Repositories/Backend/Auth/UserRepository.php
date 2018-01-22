@@ -155,7 +155,6 @@ class UserRepository extends BaseRepository
             if ($user->update([
                 'username' => $data['username'],
                 'email' => $data['email'],
-                'timezone' => $data['timezone'],
                 'zipcode' => $data['zipcode'],
             ])) {
                 // Add selected roles/permissions

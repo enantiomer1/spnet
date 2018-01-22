@@ -21,6 +21,7 @@ return [
     'frontend' => [
         'contact' => 'Contact',
         'dashboard' => 'Dashboard',
+        'sponsor_search' => 'Sponsor Search',
         'login'     => 'Login',
         'macros'    => 'Macros',
         'register'  => 'Register',

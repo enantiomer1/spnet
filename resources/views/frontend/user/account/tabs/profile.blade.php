@@ -12,6 +12,10 @@
             <th>{{ __('labels.frontend.user.profile.email') }}</th>
             <td>{{ $logged_in_user->email }}</td>
         </tr>
+         <tr>
+            <th>{{ __('labels.frontend.user.profile.program') }}</th>
+            <td>{{ $logged_in_user->program }} </td>
+        </tr>
         <tr>
             <th>{{ __('labels.frontend.user.profile.sobriety_date') }}</th>
             <td>{{ $logged_in_user->sobriety_date }} </td>

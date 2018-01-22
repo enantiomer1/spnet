@@ -150,9 +150,10 @@ return [
                 'name'               => 'Name',
                 'username'           => 'Username',
                 'update_information' => 'Update Information',
-                'zipcode'            => 'Zipcode',
-                'bio'                => 'Bio',
+                'program'            => 'Program',
                 'sobriety_date'      => 'Sobriety Date',
+                'zipcode'            => 'Zipcode',
+                'bio'                => 'Bio',     
             ],
         ],
 
