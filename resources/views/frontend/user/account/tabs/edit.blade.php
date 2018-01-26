@@ -39,7 +39,7 @@
 
     <div class="row">
         <div class="col">
-            <div class="form-group">
+            <div class="form-group">                    
                 {{ html()->label(__('validation.attributes.frontend.program'))->for('program') }}
 
                 {{ html()->text('program')
@@ -51,7 +51,7 @@
             </div><!--form-group-->
         </div><!--col-->
     </div><!--row-->
-
+    
     <div class="row">
         <div class="col">
             <div class="form-group">

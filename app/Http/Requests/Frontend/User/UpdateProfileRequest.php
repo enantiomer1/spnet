@@ -32,7 +32,7 @@ class UpdateProfileRequest extends FormRequest
             'username'  => 'required|max:60',
             'email' => 'sometimes|required|email|max:60',
             'program' => 'required|max:7',
-            'sobriety_date' => 'required|size:10',
+            'sobriety_date' => 'date_format:"Y-m-d"|required|size:10',
             'zipcode' => 'required|size:5',
             'bio' => 'required|max:255',
             'avatar_type' => ['required', 'max:191', Rule::in(array_merge(['gravatar', 'storage'], (new Socialite)->getAcceptedProviders()))],

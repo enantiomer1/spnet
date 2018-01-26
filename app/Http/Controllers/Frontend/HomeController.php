@@ -56,14 +56,10 @@ class HomeController extends Controller
             ->where('longitude', '<=', $lonE)
             ->where('longitude', '>=', $lonW)
             ->where('city', '!=', '')
-            ->with('users:id,username')
+            ->with('users:id,username,email,program,sobriety_date,zipcode,bio')
             ->get();
 
-        // $users = new User;
-        // dd($zipdatas);
-
         return view('frontend.sponsor-search-results', compact('zipdatas'));
-
         
     }
 }

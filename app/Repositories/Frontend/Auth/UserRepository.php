@@ -141,6 +141,7 @@ class UserRepository extends BaseRepository
         $user->sobriety_date = $input['sobriety_date'];
         $user->zipcode = $input['zipcode'];
         $user->bio = $input['bio'];
+        $zipdata = Zipdata::where('zip_code', '=', $input['zipcode'])->firstOrFail();
         if (! $user->zipdatas()->where('user_id', $user->id)->exists()) {
             $user->zipdatas()->attach($zipdata);
             }
