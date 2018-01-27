@@ -159,7 +159,7 @@ return [
         ],
 
         'frontend' => [
-            'avatar'                    => 'Avatar Location',
+            'avatar'                    => 'Avatar Type',
             'email'                     => 'E-mail Address',
             'username'                  => 'Username',
             'name'                      => 'Full Name',
@@ -170,11 +170,11 @@ return [
             'new_password'              => 'New Password',
             'new_password_confirmation' => 'New Password Confirmation',
             'old_password'              => 'Old Password',
-            'program'                   => 'Program',
+            'program'                   => 'Program (Enter as: AA, NA, CA, Al-Anon)',
             'zipcode'                   => 'Zipcode (5 Digits Only)',
-            'sobriety_date'             => 'Sobriety Date (Enter as YYYY-MM-DD)',
+            'sobriety_date'             => 'Sobriety Date (Enter as: YYYY-MM-DD)',
             'bio'                       => 'Bio (Background Snippet)',
-            'search_radius'             => 'Search Radius (in Miles) i.e, 5, 10, 15',
+            'search_radius'             => 'Search Radius (in Miles) i.e, 5, 10, 15, 20',
 
         ],
     ],

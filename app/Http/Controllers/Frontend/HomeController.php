@@ -21,7 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $title = ('Home | SponsorNet');
+
+        return view('frontend.index', compact('title'));
     }
 
     /**
@@ -29,7 +31,9 @@ class HomeController extends Controller
      */
     public function sponsor_search()
     {
-        return view('frontend.sponsor-search');
+        $title = ('Sponsor Search | SponsorNet');
+
+        return view('frontend.sponsor-search', compact('title'));
     }
 
     public function search(SearchRequest $request)
@@ -59,7 +63,9 @@ class HomeController extends Controller
             ->with('users:id,username,email,program,sobriety_date,zipcode,bio')
             ->get();
 
-        return view('frontend.sponsor-search-results', compact('zipdatas'));
+        $title = ('Search Results | SponsorNet');
+
+        return view('frontend.sponsor-search-results', compact('zipdatas', 'title'));
         
     }
 }

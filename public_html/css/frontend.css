@@ -12961,6 +12961,11 @@ a.text-dark:hover {
   border-radius: 0;
 }
 
+.user-profile-image {
+  height: 50px;
+  width: 85;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.2px;

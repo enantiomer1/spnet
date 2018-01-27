@@ -17,7 +17,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('frontend.contact');
+        $title = ('Contact Us | SponsorNet');
+        
+        return view('frontend.contact', compact('title'));
     }
 
     /**
