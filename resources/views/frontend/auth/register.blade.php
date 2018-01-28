@@ -1,7 +1,5 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | Register')
-
 @section('content')
     <div class="row justify-content-center align-items-center">
         <div class="col col-sm-8 align-self-center">

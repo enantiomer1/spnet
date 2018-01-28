@@ -29,6 +29,16 @@ class HomeController extends Controller
     /**
      * @return \Illuminate\View\View
      */
+    public function about()
+    {
+        $title = ('About Us | SponsorNet');
+
+        return view('frontend.about', compact('title'));
+    }
+
+    /**
+     * @return \Illuminate\View\View
+     */
     public function sponsor_search()
     {
         $title = ('Sponsor Search | SponsorNet');
@@ -60,7 +70,7 @@ class HomeController extends Controller
             ->where('longitude', '<=', $lonE)
             ->where('longitude', '>=', $lonW)
             ->where('city', '!=', '')
-            ->with('users:id,username,email,program,sobriety_date,zipcode,bio')
+            ->with('users:id,username,email,program,sobriety_date,zipcode,bio,avatar_location')
             ->get();
 
         $title = ('Search Results | SponsorNet');

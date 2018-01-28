@@ -43,6 +43,7 @@
             @endguest
 
             <li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.contact')) }}">{{ __('navs.frontend.contact') }}</a></li>
+            <li class="nav-item"><a href="{{route('frontend.about')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.about')) }}">{{ __('navs.frontend.about') }}</a></li>
         </ul>
     </div>
 </nav>

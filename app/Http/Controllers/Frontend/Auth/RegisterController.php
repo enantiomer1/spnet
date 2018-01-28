@@ -48,7 +48,9 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('frontend.auth.register')
+        $title = ('Register | SponsorNet');
+
+        return view('frontend.auth.register', compact('title'))
             ->withSocialiteLinks((new Socialite)->getSocialLinks());
     }
 

@@ -34,7 +34,9 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('frontend.auth.login')
+        $title = ('Login | SponsorNet');
+
+        return view('frontend.auth.login', compact('title'))
             ->withSocialiteLinks((new Socialite)->getSocialLinks());
     }
 
