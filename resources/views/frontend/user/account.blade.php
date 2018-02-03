@@ -4,7 +4,7 @@
     <div class="row justify-content-center align-items-center mb-3">
         <div class="col col-sm-10 align-self-center">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header text-white bg-primary">
                     <strong>
                         {{ __('navs.frontend.user.account') }}
                     </strong>

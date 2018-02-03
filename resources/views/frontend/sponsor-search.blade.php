@@ -4,10 +4,8 @@
      <div class="row justify-content-center align-items-center">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
-                <div class="card-header">
-                    <strong>
-                        {{ __('labels.frontend.search.box_title') }}
-                    </strong>
+                <div class="card-header text-white bg-primary">
+                     <i class="fa fa-search"></i><strong> {{ __('labels.frontend.search.box_title') }}</strong>
                 </div><!--card-header-->
 
                 <div class="card-body">

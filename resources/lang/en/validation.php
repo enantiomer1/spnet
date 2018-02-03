@@ -161,7 +161,7 @@ return [
         'frontend' => [
             'avatar'                    => 'Avatar Type',
             'email'                     => 'E-mail Address',
-            'username'                  => 'Username',
+            'username'                  => 'Username (Do Not Use Full Names)',
             'name'                      => 'Full Name',
             'password'                  => 'Password',
             'password_confirmation'     => 'Password Confirmation',

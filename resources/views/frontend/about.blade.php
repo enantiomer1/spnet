@@ -4,8 +4,8 @@
     <div class="row mb-4">
         <div class="col">
                 <div class="card">
-                <div class="card-header">
-                    <i class="fa fa-hand"></i> About Us
+                <div class="card-header text-white bg-primary">
+                    <i class="fa fa-archive"></i> About Us
                 </div>
                 <div class="card-body">
                     <p>Sponsor-Net.org was created as a service work project to give back what the program has freely given to us.</p><hr>

@@ -4,7 +4,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header text-white bg-primary">
                     <strong>
                         {{ __('labels.frontend.auth.register_box_title') }}
                     </strong>

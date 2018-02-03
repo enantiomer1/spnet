@@ -17,6 +17,7 @@
             @endif
 
             @auth
+                <li class="nav-item"><a href="{{route('frontend.index')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.index')) }}">{{ __('navs.general.home') }}</a></li>
                 <li class="nav-item"><a href="{{route('frontend.sponsor-search')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.sponsor-search')) }}">{{ __('navs.frontend.sponsor_search') }}</a></li>
             @endauth
 
